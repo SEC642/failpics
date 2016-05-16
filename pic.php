@@ -1,10 +1,10 @@
 <?php
-//ini_set('display_errors',1); 
+//ini_set('display_errors',1);
 //error_reporting(E_ALL);
-$username = "failuser";
-$password = "FailBlogYo";
+$username = "root";
+$password = "";
 $host = "localhost";
-$database = "fail";
+$database = "failpics";
 $key = md5("20111031");
 
 mysql_connect($host, $username, $password) or die("Can not connect to database: ".mysql_error());
@@ -37,7 +37,7 @@ if (isset($_GET['q']) && isset($_GET['md5'])) {
     }
     $row = mysql_fetch_assoc($result);
     $content = $row['image'];
-    
+
     //header('Content-type: image/jpg');
     header('Content-Type: image/jpeg');
     echo $content;
@@ -46,4 +46,4 @@ if (isset($_GET['q']) && isset($_GET['md5'])) {
     echo "Bad content.";
     exit;
 }
-?> 
+?>

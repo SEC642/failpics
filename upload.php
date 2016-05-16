@@ -1,8 +1,8 @@
 <?php
-$dbname="fail";
+$dbname="failpics";
 $host="localhost";
-$user="failuser";
-$pass="FailBlogYo";
+$user="root";
+$pass="";
 $link = mysql_connect($host, $user, $pass);
 mysql_select_db($dbname, $link);
 ?>
